@@ -123,8 +123,8 @@ button#label_currentChannel {
 
 div.container.main>div:nth-child(1)>nav>div.navbar-header>a>img {
     content: url('https://i.ibb.co/PvydYKS8/avatar2logo-20260504060011.png');
-    width: 240px !important;
-    height: 130px !important;
+    width: 250px !important;
+    height: 140px !important;
     object-fit: contain !important;
 }
 
@@ -1315,7 +1315,7 @@ div.slider.round::before {
 
 /* 🌊 CREDITS (DO NOT REMOVE) */ 
 .breadcrumb::after { 
-	content: "CSS by Sak#327675 — Bioluminescent Avatar Theme"; 
+	content: "CSS by Sak#327675"; 
 	color: #b8f0ff; /* soft sky glow */
 	text-shadow: 1px 1px 1.5px #0a1a2a; 
 	font-size: 17px !important; 
@@ -1355,8 +1355,8 @@ div.left img {
     object-fit: cover;
     object-position: top;
     padding: 0;
-    height: 130px;
-    max-width: 130px !important;
+    height: 140px;
+    max-width: 140px !important;
     border-bottom-left-radius: inherit;
     border-bottom-right-radius: inherit;
 }
