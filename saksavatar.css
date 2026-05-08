@@ -123,8 +123,8 @@ button#label_currentChannel {
 
 div.container.main>div:nth-child(1)>nav>div.navbar-header>a>img {
     content: url('https://i.ibb.co/PvydYKS8/avatar2logo-20260504060011.png');
-    width: 250px !important;
-    height: 140px !important;
+    width: 260px !important;
+    height: 150px !important;
     object-fit: contain !important;
 }
 
