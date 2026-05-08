@@ -1,0 +1,1628 @@
+/* ========================================================= */
+/* 🌌 Sak (#327675)'s Den CSS - Avatar Theme                */
+/* 🪼 Bioluminescent Pandora / Avatar-inspired aesthetic    */
+/* ========================================================= */
+
+/*
+READ ME:
+- This CSS is themed for a glowing Pandora-inspired atmosphere.
+- Colors are luminous blues, glowing cyans, soft purples, and bioluminescent tropical highlights.
+- Do NOT redistribute without credit. 
+- You may make minor changes as long as you message me first, however you cannot remove my credit or edit this heavily
+- Designed for readability + immersive den styling.
+- Thank you so much for choosing my CSS, I hope you enjoy!
+*/
+
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap');
+
+:root {
+  /* Pandora Bioluminescent Palette */
+  --kolur1: #63d7ff;     /* luminous cyan */
+  --kolur170: #63d7ffb0; 
+
+  --kolur2: #58ffd5;     /* glowing aqua */
+  --kolur270: #58ffd5b0;
+
+  --kolur3: #1c3f52;     /* soft jungle blue */
+  --kolur370: #1c3f52c7;
+
+  --kolur350: #27566dd9; /* glowing water glass */
+
+  --kolur4: #3672a3;     /* tropical blue */
+  --kolur470: #3672a3c7;
+
+  --kolur5: #d9f7ff;     /* soft moonlight */
+  --kolur6: #21435a;     /* shaded lagoon */
+  --kolur7: #8fdcff;     /* bright glow highlight */
+
+  --kolur760: #58ffd540;
+  --kolur780: #63d7ff40;
+
+  --darkgray: #14222c;   /* soft shadowed blue */
+  --lightwhite: #eefbffce; /* pale bioluminescent glow */
+  --white: #ffffff;
+}
+
+/* ============================= */
+/* 🌌 BACKGROUND (PANDORA / BIOLUMINESCENT) */
+/* ============================= */
+
+@media screen and (max-width: 800px){
+  body {
+    background: url('https://i.ibb.co/SXZXgPSc/Screenshot-2026-05-07-at-21-09-55.png') no-repeat center center fixed;
+    background-size: cover;
+
+font-family: 'Philosopher', serif;
+
+    /* 🌌 soft luminous text */
+    color: var(--kolur1) !important;
+  }
+}
+
+@media screen and (min-width: 801px){
+  body {
+    background: url('https://i.ibb.co/SXZXgPSc/Screenshot-2026-05-07-at-21-09-55.png') center center fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px !important;
+
+    /* 🌌 readable moonlit cyan tone */
+    color: var(--kolur1) !important;
+  } 
+}
+
+/* Plant Cursor */
+* {
+  cursor: url('https://cdn.cursors-4u.net/previews/flower-61-54e4eee2-32.webp') 32 32, auto !important;
+}
+
+/* ============================= */
+/* 🪼 CHAT (PANDORA GLOW) */
+/* ============================= */
+
+#chatMessageList .s-chat-message:nth-child(even) {
+    background: rgba(44, 88, 122, 0.92) !important; /* glowing jungle blue */
+    color: #eefbff !important; /* moonlit text */
+}
+
+#chatMessageList .s-chat-message:nth-child(odd) {
+    background: rgba(61, 112, 153, 0.82) !important; /* tropical cyan-blue */
+    color: #eefbff !important;
+}
+
+.s-chat-message__pinned {
+    background: linear-gradient(
+        90deg,
+        rgba(44,88,122,0.95),
+        rgba(143,125,255,0.18) /* soft pandora purple */
+    ) !important;
+
+    color: #f3fcff !important;
+    box-shadow: 0 0 12px rgba(99, 215, 255, 0.28); /* cyan glow */
+}
+
+.s-chat-message_timestamp {
+    color: #8fdcff !important; /* glowing timestamp */
+}
+
+div#chatMessageContainer {
+    border: none !important;
+}
+
+button#label_currentChannel {
+    background: linear-gradient(90deg, #2c587a, #63d7ff) !important; /* pandora blue glow */
+    color: #eefbff !important;
+}
+
+/* ============================= */
+/* 💦 LOGO REPLACER */
+/* ============================= */
+
+div.container.main>div:nth-child(1)>nav>div.navbar-header>a>img {
+    content: url('https://i.ibb.co/PvydYKS8/avatar2logo-20260504060011.png');
+    width: 230px !important;
+    height: 120px !important;
+    object-fit: contain !important;
+}
+
+/* ============================= */
+/* 🌊 TOPBAR (WELCOME + LINKS) */
+/* ============================= */
+
+.container.topbar {
+    background: linear-gradient(
+        180deg,
+        rgba(20, 36, 22, 0.95),
+        rgba(14, 28, 18, 0.95)
+    ) !important;
+
+    border-radius: 12px !important;
+
+    box-shadow:
+        inset 0 0 25px rgba(120,170,110,0.10),
+        0 0 12px rgba(140,200,120,0.18),
+        1px 1px 5px var(--darkgray) !important;
+
+    padding: 10px 15px !important;
+    backdrop-filter: blur(6px);
+}
+
+/* 🌊 "Welcome back" text */
+.welcomeback {
+    color: #b7e4a5 !important;
+    font-size: 16px;
+    text-shadow: 0 0 6px rgba(140,200,120,0.4);
+}
+
+/* username link */
+.welcomeback a {
+    color: #8fd47a !important;
+    font-weight: bold;
+    text-shadow: 0 0 8px rgba(120,190,100,0.6);
+    transition: 0.5s;
+}
+
+.welcomeback a:hover {
+    color: #d9f7c8 !important;
+    text-shadow: 0 0 12px rgba(170,230,150,0.8);
+}
+
+/* ============================= */
+/* 🌌 LINKS */
+/* ============================= */
+
+.toplinks {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    font-family: 'Philosopher', serif;
+}
+
+/* links */
+.toplinks li a {
+    color: #8fdcff !important; /* soft avatar sky blue */
+    font-size: 15px;
+    text-decoration: none;
+
+    padding: 4px 10px;
+    border-radius: 8px;
+
+    transition: 0.4s ease;
+}
+
+/* hover glow */
+.toplinks li a:hover {
+    color: #d8f4ff !important; /* pale bioluminescent glow */
+
+    background: rgba(111, 220, 255, 0.12);
+    box-shadow: 0 0 10px rgba(111, 220, 255, 0.30);
+
+    text-shadow: 0 0 6px rgba(170, 240, 255, 0.6);
+}
+
+/* ============================= */
+/* 🫧 ICONS */
+/* ============================= */
+
+.toplinks img.icon {
+    filter:
+        drop-shadow(0 0 4px rgba(111, 220, 255, 0.35))
+        brightness(1.08);
+
+    transition: 0.4s ease;
+}
+
+.toplinks li a:hover img.icon {
+    filter:
+        drop-shadow(0 0 8px rgba(186, 238, 255, 0.7))
+        brightness(1.18);
+}
+
+/* ============================= */
+/* 💎 CURRENCY NUMBERS */
+/* ============================= */
+
+#silverBeetlesAmt,
+#goldBeetlesAmt {
+    color: #b8ebff !important;
+    text-shadow: 0 0 6px rgba(111, 220, 255, 0.55);
+}
+
+/* ============================= */
+/* 🌙 LOGOUT (slightly distinct) */
+/* ============================= */
+
+.toplinks li a[href*="logout"] {
+    color: #c8f2ff !important;
+}
+
+.toplinks li a[href*="logout"]:hover {
+    background: rgba(140, 215, 255, 0.14);
+    box-shadow: 0 0 12px rgba(140, 215, 255, 0.35);
+}
+
+/* ============================= */
+/* 🌌 FLOATING MOUNTAIN CAVES */
+/* ============================= */
+
+/* base cave image styling (DO NOT override specific banners) */
+div.cave-grid > img {
+    height: 150px;
+    width: 250px;
+    opacity: 0.78;
+    border-radius: 10px !important;
+
+    box-shadow:
+        0 0 12px rgba(111, 220, 255, 0.22) !important;
+
+    transition: 0.3s ease;
+}
+
+/* hover base */
+div.cave-grid > img:hover {
+    opacity: 1;
+    filter: brightness(1.1) contrast(1.04);
+}
+
+/* prideoverview */
+div.cave-grid > img[src$="prideoverviewbanner.png"] {
+    content: url('https://i.ibb.co/7tCzVLvg/Screenshot-2026-05-07-at-21-16-58.png') !important;
+}
+
+/* hover version */
+div.cave-grid > img[src$="prideoverview.png"]:hover {
+    content: url('https://i.ibb.co/7tCzVLvg/Screenshot-2026-05-07-at-21-16-58.png') !important;
+	transition: 0.9s !important;
+}
+
+/* unsorted lions */
+div.cave-grid > img[src$="unsortedlionsbanner.png"] {
+    content: url('https://i.ibb.co/mVGJdwPg/Screenshot-2026-05-07-at-21-12-37.png') !important;
+}
+
+/* unsorted lions hover */
+div.cave-grid > img[src$="unsortedlionsbanner.png"]:hover {
+    content: url('https://i.ibb.co/mVGJdwPg/Screenshot-2026-05-07-at-21-12-37.png') !important;
+	transition: 0.9s !important;
+}
+
+/* nesting */
+div.cave-grid > img[src$="nestingbanner.png"] {
+    content: url('https://i.ibb.co/DnF2DVK/Screenshot-2026-05-07-at-21-15-03.png') !important;
+}
+
+/* nesting hover */
+div.cave-grid > img[src$="nestingbanner.png"]:hover {
+    content: url('https://i.ibb.co/DnF2DVK/Screenshot-2026-05-07-at-21-15-03.png') !important;
+	transition: 0.9s !important;
+}
+
+/* New gens */
+a[href="cave.php?id=536134"] .cave-grid > img {
+    content: url('https://i.ibb.co/TxJ7F9hV/Screenshot-2026-05-07-at-21-22-08.png') !important;
+}
+
+a[href="cave.php?id=536134"] .cave-grid > img:hover {
+    content: url('https://i.ibb.co/TxJ7F9hV/Screenshot-2026-05-07-at-21-22-08.png') !important;
+    opacity: 1;
+}
+
+/* Olympus */
+a[href="cave.php?id=265610"] .cave-grid > img {
+    content: url('https://i.ibb.co/27kfCY1k/Screenshot-2026-05-07-at-21-22-32.png') !important;
+}
+
+a[href="cave.php?id=265610"] .cave-grid > img:hover {
+    content: url('https://i.ibb.co/27kfCY1k/Screenshot-2026-05-07-at-21-22-32.png') !important;
+    opacity: 1;
+}
+
+/* Rosette Godesses */
+a[href="cave.php?id=352507"] .cave-grid > img {
+    content: url('https://i.ibb.co/VsNSxqx/Screenshot-2026-05-07-at-21-24-11.png') !important;
+}
+
+a[href="cave.php?id=352507"] .cave-grid > img:hover {
+    content: url('https://i.ibb.co/VsNSxqx/Screenshot-2026-05-07-at-21-24-11.png') !important;
+    opacity: 1;
+}
+
+/* The Dome of Specialty */
+a[href="cave.php?id=276265"] .cave-grid > img {
+    content: url('https://i.ibb.co/Xfg1R2ww/Screenshot-2026-05-07-at-21-29-33.png') !important;
+}
+
+a[href="cave.php?id=276265"] .cave-grid > img:hover {
+    content: url('https://i.ibb.co/Xfg1R2ww/Screenshot-2026-05-07-at-21-29-33.png') !important;
+    opacity: 1;
+}
+
+/* regular caves */
+div.cave-grid > img[src$="caveunused.jpg"] {
+    content: url("https://i.ibb.co/Q3WqwM2y/Screenshot-2026-05-07-at-21-30-59.png") !important;
+}
+
+div.cave-grid > img[src$="caveunused.jpg"]:hover {
+    content: url("https://i.ibb.co/Q3WqwM2y/Screenshot-2026-05-07-at-21-30-59.png") !important;
+	transition: 0.9s !important;
+}
+
+/* ============================= */
+/* 🫧 FEATURED LIONESS */
+/* ============================= */
+
+.lionImage img:first-child {
+    visibility: hidden;
+}
+
+.lionImage {
+    background: url('https://i.ibb.co/Q3WqwM2y/Screenshot-2026-05-07-at-21-30-59.png') no-repeat !important;
+    background-size: cover;
+
+    box-shadow:
+        0 0 18px rgba(111, 220, 255, 0.20); /* soft bioluminescent glow */
+}
+
+/* ============================= */
+/* 🌌 CAVE / PANEL STYLE */
+/* ============================= */
+
+.cave-grid,
+.mound-grid {
+    background: rgba(16, 52, 72, 0.68) !important; /* airy avatar blue */
+
+    box-shadow:
+        inset 0 0 25px rgba(138, 222, 255, 0.08),
+        0 0 10px rgba(0,0,0,0.35) !important;
+
+    border-radius: 12px !important;
+
+    text-shadow: 1px 1px 1.5px #06131c;
+
+    max-height: 175px;
+    max-width: 250px;
+    overflow: hidden;
+
+    font-family: 'Philosopher', serif;
+}
+
+/* ============================= */
+/* ☁️ MOUNDS */
+/* ============================= */
+
+/* beetle mound */
+.mound-grid img {
+    background: url('https://i.ibb.co/s9Lx4G6Q/Screenshot-2026-05-07-at-21-33-56.png') no-repeat center !important;
+
+    width: 0 !important;
+    height: 0 !important;
+
+    padding-top: 100px;
+    padding-right: 200px;
+
+    border-radius: 10px !important;
+    opacity: 0.78;
+
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.45)!important;
+}
+
+/* hover */
+.mound-grid img:hover {
+    transition: 0.9s !important;
+    opacity: 1;
+}
+
+/* ============================= */
+/* 🌌 LINKS */
+/* ============================= */
+
+a:link,
+a:visited {
+  color: #8fdcff !important; /* avatar sky blue */
+
+  transition: 0.5s !important;
+
+  text-shadow: 0 0 6px rgba(111, 220, 255, 0.22);
+
+  font-family: 'Philosopher', serif;
+}
+
+a:hover {
+  color: #d9f6ff !important; /* glowing pale blue */
+}
+
+/* ============================= */
+/* ✨ CLEAN GLOW TOUCH */
+/* ============================= */
+
+h1, h2, h3 {
+    text-shadow: 0 0 10px rgba(170, 235, 255, 0.18);
+
+    font-family: 'Philosopher', serif;
+}
+
+/* ============================= */
+/* 🪽 LION + USER AVATAR */
+/* ============================= */
+
+div#lion_image {
+	opacity: .85;
+
+	box-shadow:
+        0 0 12px rgba(120, 215, 255, 0.24) !important;
+
+	border-radius: 6% !important;
+
+	overflow: hidden;
+
+	margin-top: 19px;
+	margin-left: 6px;
+
+	transition: .6s ease;
+}
+
+div#lion_image:hover {
+	opacity: 1;
+
+	box-shadow:
+        0 0 18px rgba(180, 235, 255, 0.40) !important;
+
+	transition: .6s ease;
+}
+
+table#player img {
+	opacity: 0.85;
+
+	box-shadow:
+        0 0 10px rgba(120, 210, 255, 0.20) !important;
+
+	border-radius: 8px;
+}
+
+table#player img:hover {
+	opacity: 1;
+
+	box-shadow:
+        0 0 16px rgba(180, 240, 255, 0.34) !important;
+
+	transition: .6s ease;
+}
+
+/* ============================= */
+/* 🌌 NAVBAR (SKY GLOW) */
+/* ============================= */
+
+.navbar {
+	background: #4aa8d9; /* luminous avatar blue */
+
+	border-bottom: 0px ridge !important;
+
+	border-radius: 10px;
+
+	box-shadow:
+		inset 0 -40px 60px rgba(185, 235, 255, 0.22),
+	    0 0 8px rgba(150, 220, 255, 0.16) !important;
+
+	font-family: 'Philosopher', serif;
+}
+
+.navbar-default .navbar-nav > li > a {
+	font-size: 18px !important;
+
+	color: #e2f8ff !important; /* airy pale blue */
+
+	font-family: 'Philosopher', serif;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+	background: #5ebce8;
+
+	color: #ffffff !important;
+
+	text-shadow: 0 0 6px rgba(220, 245, 255, 0.65);
+
+	border-radius: 18px;
+
+	box-shadow:
+		inset 0 0 18px rgba(185, 235, 255, 0.28);
+
+	transition: 0.7s !important;
+}
+
+/* ============================= */
+/* ☁️ MAIN PANEL */
+/* ============================= */
+
+.container.main {
+	background: rgba(115, 198, 235, 0.88) !important;
+
+	border-left: 0px ridge;
+	border-right: 0px ridge;
+	border-bottom: 0px ridge;
+
+	border-radius: 10px;
+
+	box-shadow:
+		inset 0 0 90px rgba(210, 245, 255, 0.12),
+	    0 0 8px rgba(170, 230, 255, 0.10) !important;
+
+	text-shadow: 0 0 2px rgba(0, 0, 0, 0.45);
+
+	font-family: 'Philosopher', serif;
+}
+
+/* ============================= */
+/* 🪽 LEFT PANEL */
+/* ============================= */
+
+.col-md-9 {
+	background: none;
+
+	border-right: none;
+
+	color: #eefbff !important;
+
+	font-family: 'Philosopher', serif;
+}
+
+/* ============================= */
+/* 🌊 BREADCRUMB */
+/* ============================= */
+
+.breadcrumb {
+	background: #5bb8e6 !important;
+
+	border: 0px ridge !important;
+
+	border-radius: 5px;
+
+	box-shadow:
+		inset 0 0 18px rgba(220, 245, 255, 0.12),
+	    0 0 6px rgba(170, 225, 255, 0.14) !important;
+
+	font-family: 'Philosopher', serif;
+}
+
+.breadcrumb .active {
+	color: #f2fcff;
+
+	font-size: 18px !important;
+
+	font-family: 'Philosopher', serif;
+}
+
+/* ============================= */
+/* ✨ BUTTONS */
+/* ============================= */
+
+input.floatright {
+	background: rgba(190, 235, 255, 0.16) !important;
+
+	border: 0px ridge;
+
+	border-radius: 10px !important;
+
+	color: #f4fdff !important;
+
+	text-shadow: 0 0 4px rgba(220, 245, 255, 0.28) !important;
+
+	box-shadow:
+		inset 0 0 18px rgba(185, 235, 255, 0.22),
+	    0 0 6px rgba(170, 225, 255, 0.14) !important;
+
+	font-family: 'Philosopher', serif;
+}
+
+input.floatright:hover {
+	background: rgba(220, 245, 255, 0.18) !important;
+
+	box-shadow:
+		inset 0 0 22px rgba(240, 250, 255, 0.32),
+	    0 0 10px rgba(200, 235, 255, 0.22) !important;
+
+	transition: .7s !important;
+}
+
+button.button {
+	background: #58b7e8;
+
+	border: 0px ridge;
+
+	border-radius: 10px !important;
+
+	color: #eefcff;
+
+	font-size: 18px !important;
+
+	text-shadow: 0 0 4px rgba(220, 245, 255, 0.24);
+
+	box-shadow:
+		inset 0 0 18px rgba(190, 235, 255, 0.18),
+	    0 0 6px rgba(170, 225, 255, 0.12) !important;
+
+	font-family: 'Philosopher', serif;
+}
+
+button.button:hover {
+	background: #71c8f2;
+
+	color: #ffffff;
+
+	box-shadow:
+		inset 0 0 24px rgba(240, 250, 255, 0.26),
+	    0 0 12px rgba(210, 240, 255, 0.24) !important;
+
+	transition: .7s !important;
+}
+
+/* ============================= */
+/* 🫧 COMMENT BOX */
+/* ============================= */
+
+#commentBox {
+	background: rgba(145, 215, 245, 0.45) !important;
+
+	box-shadow:
+		inset 0 0 18px rgba(220, 245, 255, 0.10),
+	    0 0 6px rgba(170, 225, 255, 0.12) !important;
+
+	border: none !important;
+
+	font-family: 'Philosopher', serif;
+}
+
+::placeholder {
+	color: #eefcff !important;
+
+	font-family: 'Philosopher', serif;
+}
+
+div.comment {
+	background: rgba(120, 198, 235, 0.45);
+
+	box-shadow:
+		inset 0 0 18px rgba(220, 245, 255, 0.10),
+	    0 0 6px rgba(170, 225, 255, 0.12) !important;
+
+	font-weight: bold;
+
+	color: #ffffff;
+
+	font-family: 'Philosopher', serif;
+}
+
+input#comment {
+	background: rgba(190, 235, 255, 0.16) !important;
+
+	color: #123447 !important;
+
+	border-radius: 10px !important;
+
+	font-family: 'Philosopher', serif;
+}
+
+small.text-muted {
+	color: #eefcff;
+
+	font-family: 'Philosopher', serif;
+}
+
+small.text-muted a {
+	color: #d8f5ff;
+
+	font-family: 'Philosopher', serif;
+}
+
+input[type="button"].bad {
+	background: #7fd4ff !important;
+
+	border-radius: 10px !important;
+
+	color: #16394d !important;
+
+	font-family: 'Philosopher', serif;
+}
+
+/* 🌌 GENERAL ALERT (soft avatar glow) */
+.alert {
+	background: #4daedc;
+
+	border: 0px ridge;
+
+	text-align: center;
+
+	text-shadow: 1px 1px 1.5px #000;
+
+	border-radius: 10px !important;
+
+	float: none;
+
+	color: #eefcff !important;
+
+	box-shadow:
+		#c9f2ff66 0px -50px 36px -28px inset,
+		1px 1px 5px #000 !important;
+
+	font-family: 'Philosopher', serif;
+}
+
+/* ⚠️ WARNING ALERT */
+.alert-warning{
+	background: #63bfe8;
+
+	border: 0px ridge;
+
+	text-align: center;
+
+	text-shadow: 1px 1px 1.5px #000;
+
+	border-radius: 10px !important;
+
+	float: none;
+
+	color: #ffffff !important;
+
+	box-shadow:
+		#dff7ff66 0px -50px 36px -28px inset,
+		1px 1px 5px #000 !important;
+
+	font-family: 'Philosopher', serif;
+}
+
+/* ❗ DANGER ALERT */
+.alert-danger {
+	background: #419fcb !important;
+
+	text-align: center;
+
+	border: 0px ridge;
+
+	text-shadow: 1px 1px 1.5px #000;
+
+	border-radius: 10px !important;
+
+	float: none;
+
+	color: #f2fcff !important;
+
+	box-shadow:
+		#bdeeff66 0px -50px 36px -28px inset,
+		1px 1px 5px #000 !important;
+
+	font-family: 'Philosopher', serif;
+}
+
+/* 🪽 SIDE BOXES / FEATURE PANELS */
+.feature,
+div.left {
+	background: #57b8e6 !important; /* luminous avatar sky */
+
+	box-shadow:
+		#d6f5ff55 0px -80px 36px -28px inset,
+		1px 1px 5px #000 !important;
+
+	text-shadow: 1px 1px 1.5px #000;
+
+	border-radius: 10px !important;
+
+	border: none!important;
+
+	color: #eefcff !important;
+
+	font-family: 'Philosopher', serif;
+}
+
+/* ☁️ MAIN PANELS */
+.panel {
+	background: #4caad6 !important;
+
+	border: 0px ridge !important;
+
+	border-radius: 10px;
+
+	color:#f2fcff !important;
+
+	box-shadow:
+		#c7eeff55 0px -50px 36px -28px inset,
+		1px 1px 5px #000 !important;
+
+	font-family: 'Philosopher', serif;
+}
+
+/* ✨ TEXT INSIDE BARS */
+.progress div {
+	color: #ffffff !important;
+
+	font-size: 13px !important;
+
+	text-shadow: 1px 1px 1px #000 !important;
+
+	font-family: 'Philosopher', serif;
+}
+
+/* 🌌 BAR BACKGROUND */
+.progress {
+	background: linear-gradient(#3d8fba, #69c8ef);
+
+	box-shadow:1px 1px 5px #000 !important;
+
+	border-radius: 20px;
+}
+
+/* 💠 ENERGY BAR */
+.progress-bar-warning {
+   background: linear-gradient(#8fe5ff, #5fb8ff)!important;
+}
+
+/* 🌊 HUNGER BAR */
+.progress-bar-danger {
+    background: linear-gradient(#5fb8ff, #8fe5ff)!important;
+}
+
+/* 🫧 XP BAR */
+.progress-bar-success {
+    background: linear-gradient(#d7f5ff, #7ed0ff)!important;
+}
+
+/* 📊 GENERAL BAR STYLE */
+.progress-bar {
+    background: linear-gradient(#8fe5ff, #b8edff);
+
+	border-radius: 20px;
+
+	box-shadow:1px 1px 5px #000 !important;
+}
+
+/* 🏆 ACHIEVEMENT BAR */
+div:nth-child(2)>div>div>div.progress-bar.progress-bar-success {
+	background: linear-gradient(#8fe5ff, #5fb8ff)!important;
+}
+
+/* 📈 ACCOUNT STANDING */
+th > div > div.progress-bar.progress-bar-success {
+    background: linear-gradient(#b8edff, #8fe5ff)!important;
+}
+
+/* 🌌 MAIN HEADER */
+h1 {
+	color: #eefcff;
+
+	font-size: 72px;
+
+	font-family: 'Philosopher', serif;
+
+	text-align: center;
+
+	text-shadow: 0 0 12px #8fe5ff;
+}
+
+/* ☁️ SUB HEADER */
+h2 {
+	color: #dff7ff;
+
+	font-size: 56px;
+
+	text-align: center;
+
+	text-shadow: 0 0 10px #7ed0ff;
+
+	font-family: 'Philosopher', serif;
+}
+
+/* 🪽 SMALL HEADER */
+h3 {
+	color: #f4fdff !important;
+
+	font-size: 22px !important;
+
+	font-family: 'Philosopher', serif;
+}
+
+/* ✨ HOVER EFFECT */
+h3:hover {
+	color: #8fe5ff !important;
+
+	transition: .7s!important;
+}
+
+/* 🌊 MAIN LION INFO TABLE (container) */
+.table {
+	background: #4aa5cf; /* avatar waterglass */
+
+	border: 0px ridge;
+
+	text-shadow: 1px 1px 1.5px #000;
+
+	border-radius: 10px !important;
+
+	border-collapse: separate;
+
+	box-shadow: 0 0 8px #bdeeff33;
+
+	font-family: 'Philosopher', serif;
+}
+
+/* 🫧 PAGEDOLL */
+.container.main::after {
+	 content: "";
+
+    background-image: url('https://i.ibb.co/7xcpPp3h/bansheepagedoll-20260507220917.png');
+
+    background-size: cover;
+
+    position: fixed;
+
+	display: block;
+
+    height:200px;
+
+    width:200px;
+
+	right:0px;
+
+    bottom: 1rem;
+
+	z-index: 1;
+
+	pointer-events: none;
+}
+
+.table a:link,
+.table a:visited {
+	color: #d8f5ff !important; /* soft avatar glow */
+
+	transition: 0.5s!important;
+
+	font-family: 'Philosopher', serif;
+}
+
+.table a:active {
+	color: #ffffff !important; /* bright sky flash */
+
+	transition: 0.5s!important;
+
+	font-family: 'Philosopher', serif;
+}
+
+.table a:hover {
+	color: #eefcff !important; /* airy cloud highlight */
+
+	transform: scale(1.05);
+
+	transition: 0.7s!important;
+
+	font-family: 'Philosopher', serif;
+}
+
+/* ============================= */
+/* 🌌 ETHEREAL AVATAR TABLE CORE */
+/* ( glow layout reset) */
+/* ============================= */
+
+.container.main > div > div.col-md-9 .table:first-of-type {
+    width: 100% !important;
+
+    background: rgba(10, 18, 28, 0.35) !important; /* translucent spirit glass */
+    box-shadow:
+        0 0 18px rgba(79, 214, 255, 0.12),
+        inset 0 0 20px rgba(202, 166, 255, 0.08) !important;
+
+    border: 1px solid rgba(79, 214, 255, 0.18) !important;
+
+    margin: 0 !important;
+
+    border-collapse: collapse !important;
+    border-spacing: 0 !important;
+
+    border-radius: 12px !important;
+
+    font-family: 'Cormorant Garamond', serif;
+    color: #eaf6ff;
+}
+
+/* readable spacing */
+.container.main > div > div.col-md-9 .table:first-of-type td {
+    padding: 8px 12px !important;
+    text-align: center !important;
+    color: #eaf6ff !important;
+}
+
+/* ============================= */
+/* 🌌 SPIRIT STACK LAYOUT */
+/* (floating avatar interface alignment fix) */
+/* ============================= */
+
+#about > tbody > tr:nth-child(2) {
+    display: block !important;
+}
+
+#about > tbody > tr:nth-child(2) > td {
+    display: block !important;
+    width: 100% !important;
+}
+
+/* spacing between image and info */
+#about > tbody > tr:nth-child(2) > td:first-child {
+    margin-bottom: 12px !important;
+}
+
+/* ============================= */
+/* 👻 ETHEREAL LION / AVATAR HEADER */
+/* ============================= */
+
+div#lion_image {
+    content: url("https://i.ibb.co/9mxXGZft/Screenshot-2026-05-07-at-20-57-26.png") !important;
+
+    display: block;
+    margin: 0 auto !important;
+
+    width: auto !important;
+    max-width: 800px !important;
+    height: auto !important;
+
+    box-shadow:
+        0 0 18px rgba(79, 214, 255, 0.18),
+        0 0 30px rgba(202, 166, 255, 0.10);
+
+    border-radius: 10px;
+}
+
+/* remove original lion system */
+#lion_image .lion-image-block {
+    display: none !important;
+}
+
+/* hide background layers */
+#lion_image .lion-image-block > img[data-type="background"],
+#lion_image .lion-image-block > img[data-layer="background"] {
+    display: none !important;
+}
+
+/* hover effect */
+#lion_image:hover {
+    transform: scale(1.01);
+    transition: 0.25s ease;
+    filter: brightness(1.1) saturate(1.2);
+}
+
+/* ============================= */
+/* 🌌 FINAL SPIRIT TOUCH */
+/* ============================= */
+
+.container.main > div > div.col-md-9 .table:first-of-type {
+    margin-top: 10px !important;
+}
+
+/* accent text */
+.container.main > div > div.col-md-9 .table:first-of-type b {
+    color: #4fd6ff !important; /* glowing sky-blue accent */
+    font-weight: 600;
+    text-shadow: 0 0 6px rgba(79, 214, 255, 0.35);
+}
+
+/* 🌌 HEADER ROWS */
+.top,
+.bottom,
+th {
+	background: #56b7e6 !important; /* glowing skyglass */
+
+	box-shadow:
+		0 0 12px #cdefff33 inset,
+		1px 1px 5px #000 !important;
+
+	color: #f4fdff !important; /* pale luminous blue text */
+
+	font-size: 18px !important;
+
+	border-radius: 10px;
+
+	font-family: 'Philosopher', serif;
+}
+
+.table .left {
+	background: #4ca8d4 !important; /* shaded water edge */
+
+	box-shadow:
+		0 0 10px #cdefff22 inset !important;
+
+	border-radius: 10px;
+}
+
+input,
+select,
+textarea {
+	background: #4aa3cc !important;
+
+	border: 0px ridge !important;
+
+	box-shadow:
+		0 0 10px #d6f5ff33 inset,
+		1px 1px 5px #000 !important;
+
+	border-radius: 10px;
+
+	color: #f2fcff !important;
+
+	text-shadow: 1px 1px 2px #000 !important;
+
+	font-family: 'Philosopher', serif;
+}
+
+.inner-table .left {
+	background: #59b7e3 !important;
+
+	color: #eefcff !important;
+
+	box-shadow:
+		0 0 10px #d6f5ff22 inset,
+		1px 1px 5px #000 !important;
+
+	font-family: 'Philosopher', serif;
+}
+
+.inner-table .right {
+	background: #4aa3cc !important;
+
+	box-shadow:
+		0 0 12px #cdefff33 inset,
+		1px 1px 5px #000 !important;
+
+	color: #f4fdff !important;
+
+	border-radius: 10px;
+
+	font-family: 'Philosopher', serif;
+}
+
+.right_odd {
+	background: #4298bf !important;
+
+	box-shadow:
+		0 0 10px #d6f5ff22 inset !important;
+}
+
+.item-header {
+	background: #59b7e3 !important;
+
+	border-radius: 10px;
+
+	box-shadow:
+		0 0 10px #d6f5ff33 inset !important;
+
+	color: #eefcff !important;
+
+	font-size: 15px !important;
+
+	font-family: 'Philosopher', serif;
+}
+
+.item {
+	background: #4aa3cc !important;
+
+	box-shadow:
+		0 0 12px #d6f5ff33 inset,
+		1px 1px 5px #000 !important;
+
+	border-radius: 10px;
+
+	border: 0px ridge !important;
+
+	font-family: 'Philosopher', serif;
+}
+
+.item-footer {
+	background: #4298bf;
+}
+
+/* ☁️ SLIDER */
+div.slider.round {
+	background: #8fe5ff !important; /* sky glow core */
+}
+
+div.slider.round::before {
+	background: #f4fdff !important; /* glowing orb */
+}
+
+/* 🫧 BOX CONTAINERS */
+.boxcontainer {
+	background: none;
+
+	height: auto;
+
+	padding: 0px;
+
+	display: flex;
+
+	justify-content: center;
+}
+
+/* 🌌 BOXES */
+.Box1,
+.Box2 {
+	float: left;
+
+	background: linear-gradient(180deg, #56b7e6, #4298bf);
+
+	color: #f2fcff;
+
+	padding: 15px;
+
+	border: 0px ridge !important;
+
+	box-shadow:
+		0 0 20px #d6f5ff1a inset,
+		1px 1px 5px #000 !important;
+
+	border-radius: 10px;
+
+	margin: 5px;
+
+	height: 300px;
+
+	width: 350px;
+
+	overflow: hidden;
+
+	margin-bottom: 25px;
+
+	transition: 1s;
+
+	font-family: 'Philosopher', serif;
+}
+
+.Box1:hover,
+.Box2:hover {
+	overflow-y: auto;
+}
+
+/* 🌊 SCROLLBAR */
+::-webkit-scrollbar {
+	width: 9px;
+
+	height: 9px;
+}
+
+::-webkit-scrollbar-track {
+	background: #4298bf;
+
+	box-shadow:
+		0 0 10px #d6f5ff22 inset,
+		1px 1px 5px #000 !important;
+
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #8fe5ff;
+
+	box-shadow:
+		0 0 12px #d6f5ff33 inset,
+		1px 1px 5px #000 !important;
+
+	border-radius: 10px;
+}
+
+/* 📱 MOBILE OVERRIDE */
+@media only screen and (max-width: 767px) {
+    .container.main .hidden-xs {
+        display: block !important;
+    }
+}
+
+/* 🌊 CREDITS (DO NOT REMOVE) */ 
+.breadcrumb::after { 
+	content: "CSS by Sak#327675 — Bioluminescent Avatar Theme"; 
+	color: #b8f0ff; /* soft sky glow */
+	text-shadow: 1px 1px 1.5px #0a1a2a; 
+	font-size: 17px !important; 
+	position: absolute; 
+	right: 13%; 
+	z-index: 100 
+}
+
+/* 🌊 DYNASTY LIST — ETHEREAL BLUE GLOW */
+.dynastylist .left {
+	position: relative;
+	overflow: hidden;
+	border-radius: 10px;
+	background-size: cover !important;
+	background-position: center !important;
+	background-repeat: no-repeat !important;
+	transition: 0.8s ease;
+	box-shadow: 1px 1px 5px #0a1a2a;
+	width: 200px;
+	height: 200px;
+	display: block;
+}
+
+/* ensure anchor doesn't collapse layout */
+.dynastylist a {
+	display: block;
+}
+
+/* shared behavior fix */
+.dynastylist .left {
+	display: block;
+}
+
+/* 🌊 DYNASTY */
+div.left img {
+    content: url('https://i.ibb.co/9kSP8P56/Screenshot-2026-05-07-at-21-36-50.png') !important;
+    object-fit: cover;
+    object-position: top;
+    padding: 0;
+    height: 130px;
+    max-width: 130px !important;
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+}
+
+/* ✨ hover glow effect — bioluminescent mist */
+.row.dynastycollection .dynastylist .left:hover {
+	transform: scale(1.03);
+	box-shadow:
+		0 0 10px #36c6ff55,
+		0 0 20px #8ad0ff33,
+		1px 1px 5px #0a1a2a;
+	filter: brightness(1.15) saturate(1.2);
+}
+
+/* 🌊 BACKGROUND TABLE — LIGHT AQUA BASE */
+.table {
+	background: #0b1a24; /* deep ocean-blue base */
+	border: 0px ridge;
+	text-shadow: 1px 1px 1.5px #000;
+	border-radius: 10px !important;
+	border-collapse: separate;
+	box-shadow: 0 0 10px #36c6ff22;
+}
+
+.table a:link {
+	color: #7ad7ff !important; /* aqua glow */
+	transition: 0.5s!important;
+}
+
+.table a:visited {
+	color: #7ad7ff !important;
+	transition: 0.5s!important;
+}
+
+.table a:active {
+	color: #b8f0ff !important; /* bright flash */
+	transition: 0.5s!important;
+} 
+
+.table a:hover {
+	color: #e6fbff !important; /* soft luminous ice */
+	-webkit-transform: scale(1.1);
+	transition: 0.7s!important;
+}
+
+/* ============================= */
+/* 🌊 CONTAINER — SKY FLOATING LAYOUT */
+/* ============================= */
+.boxcontainer {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    gap: 10px;
+
+    font-family: 'Quicksand', 'Poppins', sans-serif;
+}
+
+/* ============================= */
+/* 🌊 BOX — BIO-LUMINOUS SKY THEME */
+/* ============================= */
+.box {
+    flex: 1;
+    height: 240px;
+
+    background: linear-gradient(
+        180deg,
+        rgba(20, 38, 54, 0.95),   /* deep sky navy */
+        rgba(10, 20, 30, 0.95)    /* abyss blue */
+    ) !important;
+
+    color: #e6fbff; /* soft icy glow */
+    padding: 12px;
+
+    border: 1px solid rgba(90, 180, 255, 0.35);
+    border-radius: 12px;
+
+    box-shadow:
+        0 0 18px rgba(0,0,0,0.7),
+        inset 0 0 25px rgba(54,198,255,0.10),
+        0 0 8px rgba(138,208,255,0.18);
+
+    box-sizing: border-box;
+    overflow-y: auto;
+
+    transition: all 0.35s ease;
+
+    font-family: 'Quicksand', 'Poppins', sans-serif;
+}
+
+/* ============================= */
+/* ✨ ETHEREAL HOVER — BLUE AURORA */
+/* ============================= */
+.box:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 0 25px rgba(54,198,255,0.35),
+        inset 0 0 35px rgba(138,208,255,0.18);
+
+    border-color: rgba(184,240,255,0.45);
+}
+
+/* ============================= */
+/* 🖼️ IMAGE SAFETY */
+/* ============================= */
+.box img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+
+    box-shadow: 0 0 10px rgba(54,198,255,0.18);
+}
+
+/* ============================= */
+/* 🔤 HEADINGS — LIGHT AURORA TEXT */
+/* ============================= */
+.box h3 {
+    color: #b8f0ff; /* glowing ice blue */
+    text-align: center;
+    margin-bottom: 6px;
+    font-size: 18px;
+
+    text-shadow: 0 0 8px rgba(54,198,255,0.5);
+
+    font-family: 'Quicksand', 'Poppins', sans-serif;
+}
+
+/* ============================= */
+/* 📜 SCROLLBAR — BLUE LIQUID GLASS */
+/* ============================= */
+.box::-webkit-scrollbar {
+    width: 8px;
+}
+
+.box::-webkit-scrollbar-track {
+    background: rgba(10,20,30,0.9);
+    border-radius: 10px;
+}
+
+.box::-webkit-scrollbar-thumb {
+    background: linear-gradient(#36c6ff, #8ad0ff);
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(54,198,255,0.4);
+}
+
+/* ============================= */
+/* 📱 MOBILE */
+/* ============================= */
+@media (max-width: 767px) {
+    .boxcontainer {
+        flex-direction: column;
+    }
+
+    .box {
+        height: auto;
+    }
+}
+
+/* 🌌 AVATAR PARTICLES (bioluminescent spirit orbs) */
+.firefly::before {
+    background: #4fd6ff; /* soft sky bioluminescent blue */
+    opacity: 0.4;
+    animation: drift ease alternate infinite;
+}
+
+.firefly::after {
+    background: #caa6ff; /* ethereal lavender glow */
+    opacity: 0;
+    box-shadow: 0 0 0vw 0vw #4fd6ff;
+    animation: drift ease alternate infinite, flash ease infinite;
+}
+
+/* 🌌 MOVEMENT SET 12 */
+.firefly:nth-child(12) {
+  animation-name: move12;
+}
+.firefly:nth-child(12)::before {
+  animation-duration: 17s;
+}
+.firefly:nth-child(12)::after {
+  animation-duration: 17s, 8765ms;
+  animation-delay: 0ms, 4321ms;
+}
+
+@keyframes move12 {
+  0% { transform: translateX(10vw) translateY(-10vh) scale(0.5); }
+  25% { transform: translateX(-30vw) translateY(20vh) scale(0.7); }
+  50% { transform: translateX(20vw) translateY(30vh) scale(0.85); }
+  75% { transform: translateX(-15vw) translateY(-25vh) scale(0.6); }
+  100% { transform: translateX(0vw) translateY(0vh) scale(0.6); }
+}
+
+.firefly:nth-child(12) {
+  animation-name: move12;
+}
+.firefly:nth-child(12)::before {
+  animation-duration: 15s;
+}
+.firefly:nth-child(12)::after {
+  animation-duration: 15s, 8700ms;
+  animation-delay: 0ms, 2600ms;
+}
+
+/* 🌌 MOVEMENT SET 13 */
+.firefly:nth-child(13) {
+  animation-name: move13;
+}
+.firefly:nth-child(13)::before {
+  animation-duration: 12s;
+}
+.firefly:nth-child(13)::after {
+  animation-duration: 12s, 9600ms;
+  animation-delay: 0ms, 1950ms;
+}
+
+@keyframes move13 {
+  0% { transform: translateX(22vw) translateY(23vh) scale(0.44); }
+  25% { transform: translateX(-42vw) translateY(36vh) scale(0.77); }
+  50% { transform: translateX(10vw) translateY(-20vh) scale(0.9); }
+  75% { transform: translateX(-36vw) translateY(-9vh) scale(0.6); }
+  100% { transform: translateX(15vw) translateY(25vh) scale(0.53); }
+}
+
+/* 🌌 MOVEMENT SET 14 */
+.firefly:nth-child(14) {
+  animation-name: move14;
+}
+.firefly:nth-child(14)::before {
+  animation-duration: 16s;
+}
+.firefly:nth-child(14)::after {
+  animation-duration: 16s, 9500ms;
+  animation-delay: 0ms, 8300ms;
+}
+
+@keyframes move14 {
+  0% { transform: translateX(15vw) translateY(-28vh) scale(0.80); }
+  25% { transform: translateX(-47vw) translateY(-10vh) scale(0.93); }
+  50% { transform: translateX(16vw) translateY(-9vh) scale(0.68); }
+  75% { transform: translateX(-23vw) translateY(34vh) scale(0.60); }
+  100% { transform: translateX(0vw) translateY(0vh) scale(0.55); }
+}
+
+/* 🌌 MOVEMENT SET 15 */
+.firefly:nth-child(15) {
+  animation-name: move15;
+}
+.firefly:nth-child(15)::before {
+  animation-duration: 17s;
+}
+.firefly:nth-child(15)::after {
+  animation-duration: 17s, 6300ms;
+  animation-delay: 0ms, 8450ms;
+}
+
+@keyframes move15 {
+  0% { transform: translateX(-7vw) translateY(-24vh) scale(0.78); }
+  25% { transform: translateX(45vw) translateY(-16vh) scale(0.64); }
+  50% { transform: translateX(-27vw) translateY(36vh) scale(0.81); }
+  75% { transform: translateX(31vw) translateY(29vh) scale(0.57); }
+  100% { transform: translateX(18vw) translateY(47vh) scale(1); }
+}
+
+/* 🌌 SHARED MOTION EFFECT — ETHEREAL DRIFT */
+@keyframes drift {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
